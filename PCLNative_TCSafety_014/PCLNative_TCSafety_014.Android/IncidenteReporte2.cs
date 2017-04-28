@@ -87,6 +87,14 @@ namespace PCLNative_TCSafety_014.Droid
 
             var incidente3 = new Intent(this, typeof(IncidenteReporte3));
             incidente3.PutExtra("id_investigador", _id_investigador);
+            incidente3.PutExtra("titulo", _titulo);
+            incidente3.PutExtra("id_empresa", _id_empresa);
+            incidente3.PutExtra("relato_causa", _relato_causa);
+            incidente3.PutExtra("medidas_control", _medidas_control);
+            incidente3.PutExtra("id_impactado", _id_impactado);
+            incidente3.PutExtra("id_impacto", _id_impacto);
+            incidente3.PutExtra("id_potencial", _id_potencial);
+    
             StartActivity(incidente3);
         }
 

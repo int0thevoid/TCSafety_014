@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/cbEmpresa1"
                 android:layout_marginBottom="10dp"
-                android:theme="@android:style/Widget.DeviceDefault.Light.DropDownItem.Spinner" />
+                android:background="#808080" />
             <TextView
                 android:text="Investigador :"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/cbInvestigador1"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="50dp"
                 android:background="#808080" />
             <Button
                 android:layout_width="match_parent"

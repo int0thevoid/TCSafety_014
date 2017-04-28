@@ -58,6 +58,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\INAfectado.cs" />
     <Compile Include="Clases\INEstadoTipoIncidente.cs" />
     <Compile Include="Clases\INImpactado.cs" />
     <Compile Include="Clases\INImpacto.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="IncidenteReporte1.cs" />
     <Compile Include="IncidenteReporte2.cs" />
     <Compile Include="IncidenteReporte3.cs" />
+    <Compile Include="IncidenteReporte4.cs" />
+    <Compile Include="IncidenteReporte5.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +102,12 @@
     <AndroidResource Include="Resources\layout\IncidenteReporte3.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\IncidenteReporte4.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\IncidenteReporte5.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <None Include="Web References\WSTCSafety\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -118,7 +127,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\Main.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
