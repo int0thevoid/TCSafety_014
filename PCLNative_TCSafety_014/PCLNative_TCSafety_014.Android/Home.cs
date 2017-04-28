@@ -30,8 +30,8 @@ namespace PCLNative_TCSafety_014.Droid
 
         private void BtnIncidentes_Click(object sender, EventArgs e)
         {
-            //var incidentes = new Intent(this, typeof(IncidenteReporte1));
-            //StartActivity(incidentes);
+            var incidente1 = new Intent(this, typeof(IncidenteReporte1));
+            StartActivity(incidente1);
         }
     }
 }

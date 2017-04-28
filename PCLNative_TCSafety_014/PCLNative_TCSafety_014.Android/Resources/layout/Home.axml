@@ -21,7 +21,8 @@
             android:id="@+id/btnAdministracion"
             android:layout_weight="5"
             android:background="#316DA4"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"/>
         <Button
             android:text="Incidentes"
             android:layout_width="match_parent"
@@ -29,7 +30,8 @@
             android:id="@+id/btnIncidentes"
             android:layout_weight="5"
             android:background="#316DA4"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -47,7 +49,8 @@
             android:id="@+id/btnInventario"
             android:layout_weight="5"
             android:background="#316DA4"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"/>
         <Button
             android:text="Módulo"
             android:layout_width="match_parent"
@@ -55,6 +58,7 @@
             android:id="@+id/button3"
             android:layout_weight="5"
             android:background="#6C7A89"
-            android:layout_margin="10dp" />
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 </LinearLayout>

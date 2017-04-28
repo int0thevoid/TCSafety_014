@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@android:color/white">
+  <ScrollView
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_margin="20dp">
+      <TextView
+        android:text="2. Identificación"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Información base de los hechos"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView5"
+          android:layout_marginBottom="20dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Título :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView6"
+          android:textColor="@android:color/black"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtTitulo"
+          android:textColor="@android:color/black"
+          android:layout_marginBottom="10dp" />
+      <TextView
+          android:text="Empresa :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView7"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbEmpresa2"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Relato / Causa probable :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView7"
+          android:textColor="@android:color/black"/>
+      <MultiAutoCompleteTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtRelatoCausa"
+          android:layout_marginBottom="10dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Medidas de control inmediatas :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView7"
+          android:textColor="@android:color/black"/>
+      <MultiAutoCompleteTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtMedidasControl"
+          android:layout_marginBottom="10dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Impacto real :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView8"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbImpactado"
+          android:layout_marginBottom="2dp"
+          android:background="#808080"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbImpacto"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Potencial :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView9"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbPotencial"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Fecha ocurrencia :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView10"
+          android:textColor="@android:color/black"/>
+      <!--
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/datePicker"
+                android:minWidth="25px"
+                android:minHeight="25px" />
+            <TimePicker
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/timePicker" />
+          -->
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnIncidenteReporte3"
+          android:text="Siguiente"
+          android:textColor="@android:color/white"
+          android:background="#316DA4" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

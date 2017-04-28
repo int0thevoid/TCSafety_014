@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+  <ScrollView
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_margin="20dp">
+      <TextView
+        android:text="3. Ubicación y clasificación"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Detalle del lugar donde ocurren los hechos"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView12"
+          android:layout_marginBottom="20dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Lugar :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView13"
+          android:textColor="@android:color/black"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtLugar"
+          android:layout_marginBottom="10dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Área :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView14"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbArea"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Subarea(opcional) :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView15"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbSubarea"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Tipo incidente :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView16" 
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbEstadoTipoIncidente"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Clasificación :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/lblTipoIncidente"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbTipoIncidente"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnIncidenteReporte4"
+          android:text="Siguiente"
+          android:textColor="@android:color/white"
+          android:background="#316DA4" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

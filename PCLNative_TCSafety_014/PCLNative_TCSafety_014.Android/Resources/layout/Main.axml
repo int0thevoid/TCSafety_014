@@ -34,7 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/lblMensaje"
-            android:layout_marginBottom="15dp" />
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/black" />
         <TextView
             android:text="RUT"
             android:layout_width="match_parent"

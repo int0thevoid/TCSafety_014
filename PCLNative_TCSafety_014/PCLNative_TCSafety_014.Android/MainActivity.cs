@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace PCLNative_TCSafety_014.Droid
 {
-	[Activity (Label = "TCSafety", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "TCSafety", MainLauncher = true, Icon = "@drawable/icon", NoHistory = true)]
 	public class MainActivity : Activity
 	{
         TextView lblMensaje;
@@ -20,12 +20,9 @@ namespace PCLNative_TCSafety_014.Droid
         protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			// Set our view from the "main" layout resource
+            
 			SetContentView (Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
             lblMensaje = FindViewById<TextView>(Resource.Id.lblMensaje);
             txtRut = FindViewById<EditText>(Resource.Id.txtRut);
             txtPassword = FindViewById<EditText>(Resource.Id.txtPassword);
