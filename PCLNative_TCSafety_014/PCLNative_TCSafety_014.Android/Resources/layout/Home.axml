@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="5"
+        android:weightSum="10">
+        <Button
+            android:text="Administración"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnAdministracion"
+            android:layout_weight="5"
+            android:background="#316DA4"
+            android:layout_margin="10dp" />
+        <Button
+            android:text="Incidentes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnIncidentes"
+            android:layout_weight="5"
+            android:background="#316DA4"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout2"
+        android:layout_weight="5"
+        android:weightSum="10">
+        <Button
+            android:text="Inventario"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btnInventario"
+            android:layout_weight="5"
+            android:background="#316DA4"
+            android:layout_margin="10dp" />
+        <Button
+            android:text="Módulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button3"
+            android:layout_weight="5"
+            android:background="#6C7A89"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+</LinearLayout>

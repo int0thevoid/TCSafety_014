@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">PCLNative_TCSafety_014.Android</string>
+	<string name="app_name">TCSafety</string>
+
+  <string name="primaryColor">#316DA4</string>
 </resources>

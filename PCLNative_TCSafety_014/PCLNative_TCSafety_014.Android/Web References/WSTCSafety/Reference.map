@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd1" filename="WSIncidentes.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd2" filename="WSIncidentes0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?wsdl" filename="WSIncidentes.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?disco" filename="WSIncidentes.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd0" filename="WSIncidentes1.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

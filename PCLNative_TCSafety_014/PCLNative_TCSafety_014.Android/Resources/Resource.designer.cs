@@ -47,6 +47,9 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int tcsafety = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -60,8 +63,41 @@ namespace PCLNative_TCSafety_014.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050001
+			public const int btnAdministracion = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int btnIncidentes = 2131034114;
+			
+			// aapt resource value: 0x7f05000b
+			public const int btnIngresar = 2131034123;
+			
+			// aapt resource value: 0x7f050004
+			public const int btnInventario = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int button3 = 2131034117;
+			
+			// aapt resource value: 0x7f050007
+			public const int lblMensaje = 2131034119;
+			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int linearLayout1 = 2131034112;
+			
+			// aapt resource value: 0x7f050003
+			public const int linearLayout2 = 2131034115;
+			
+			// aapt resource value: 0x7f050006
+			public const int textView1 = 2131034118;
+			
+			// aapt resource value: 0x7f050009
+			public const int textView2 = 2131034121;
+			
+			// aapt resource value: 0x7f05000a
+			public const int txtPassword = 2131034122;
+			
+			// aapt resource value: 0x7f050008
+			public const int txtRut = 2131034120;
 			
 			static Id()
 			{
@@ -77,7 +113,10 @@ namespace PCLNative_TCSafety_014.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Home = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{
@@ -97,6 +136,9 @@ namespace PCLNative_TCSafety_014.Droid
 			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int primaryColor = 2130968578;
 			
 			static String()
 			{
