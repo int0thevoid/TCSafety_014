@@ -4,9 +4,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
-  <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-  </ScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:layout_margin="20dp">
+            <TextView
+                android:text="5. Anexo (Opcional)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView11"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:text="Imagen del lugar de los hechos"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView12"
+                android:layout_marginBottom="20dp"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblMsgLesionados"
+                android:layout_marginBottom="20dp"
+                android:textColor="@android:color/black" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView"
+                android:layout_marginBottom="10dp" />
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tomar Foto"
+                android:id="@+id/btnTomarFoto"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
+                android:background="#808080"
+                android:layout_gravity="bottom"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reportar Incidente"
+                android:id="@+id/btnReportarIncidente"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:textColor="@android:color/white"
+                android:background="#316DA4" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

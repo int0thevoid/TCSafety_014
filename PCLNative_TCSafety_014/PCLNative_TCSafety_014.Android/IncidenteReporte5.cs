@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using Android.Provider;
+using Android.Graphics;
 
 namespace PCLNative_TCSafety_014.Droid
 {
@@ -33,6 +35,10 @@ namespace PCLNative_TCSafety_014.Droid
         private List<Clases.INAfectado> listadoAfectado;
         private WSTCSafety.WSIncidentes client;
 
+        private Button btnTomarFoto;
+        private Button btnReportarIncidente;
+        private ImageView imageView;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -54,9 +60,30 @@ namespace PCLNative_TCSafety_014.Droid
             _lugar = Intent.GetStringExtra("lugar");
             listadoAfectado = JsonConvert.DeserializeObject<List<Clases.INAfectado>>(Intent.GetStringExtra("listadoAfectado"));
 
+            btnTomarFoto = FindViewById<Button>(Resource.Id.btnTomarFoto);
+            btnReportarIncidente = FindViewById<Button>(Resource.Id.btnReportarIncidente);
+            imageView = FindViewById<ImageView>(Resource.Id.imageView);
 
+            btnTomarFoto.Click += BtnTomarFoto_Click;
+            btnReportarIncidente.Click += BtnReportarIncidente_Click;
+        }
 
+        private void BtnReportarIncidente_Click(object sender, EventArgs e)
+        {
+            
+        }
 
+        private void BtnTomarFoto_Click(object sender, EventArgs e)
+        {
+            Intent cameraIntent = new Intent(MediaStore.ActionImageCapture);
+            StartActivityForResult(cameraIntent,0);
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            Bitmap bitmap = (Bitmap)data.Extras.Get("data");
+            imageView.SetImageBitmap(bitmap);
         }
     }
 }

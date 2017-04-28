@@ -84,11 +84,17 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f050002
 			public const int btnIncidentes = 2131034114;
 			
-			// aapt resource value: 0x7f050032
-			public const int btnIngresar = 2131034162;
+			// aapt resource value: 0x7f050035
+			public const int btnIngresar = 2131034165;
 			
 			// aapt resource value: 0x7f050004
 			public const int btnInventario = 2131034116;
+			
+			// aapt resource value: 0x7f050030
+			public const int btnReportarIncidente = 2131034160;
+			
+			// aapt resource value: 0x7f05002f
+			public const int btnTomarFoto = 2131034159;
 			
 			// aapt resource value: 0x7f050005
 			public const int button3 = 2131034117;
@@ -129,8 +135,11 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f05002b
 			public const int cbTipoLesion = 2131034155;
 			
-			// aapt resource value: 0x7f05002f
-			public const int lblMensaje = 2131034159;
+			// aapt resource value: 0x7f05002e
+			public const int imageView = 2131034158;
+			
+			// aapt resource value: 0x7f050032
+			public const int lblMensaje = 2131034162;
 			
 			// aapt resource value: 0x7f050027
 			public const int lblMsgLesionados = 2131034151;
@@ -144,8 +153,8 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f050003
 			public const int linearLayout2 = 2131034115;
 			
-			// aapt resource value: 0x7f05002e
-			public const int textView1 = 2131034158;
+			// aapt resource value: 0x7f050031
+			public const int textView1 = 2131034161;
 			
 			// aapt resource value: 0x7f050018
 			public const int textView10 = 2131034136;
@@ -204,14 +213,14 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f050028
 			public const int txtNombre = 2131034152;
 			
-			// aapt resource value: 0x7f050031
-			public const int txtPassword = 2131034161;
+			// aapt resource value: 0x7f050034
+			public const int txtPassword = 2131034164;
 			
 			// aapt resource value: 0x7f050011
 			public const int txtRelatoCausa = 2131034129;
 			
-			// aapt resource value: 0x7f050030
-			public const int txtRut = 2131034160;
+			// aapt resource value: 0x7f050033
+			public const int txtRut = 2131034163;
 			
 			// aapt resource value: 0x7f05000e
 			public const int txtTitulo = 2131034126;
