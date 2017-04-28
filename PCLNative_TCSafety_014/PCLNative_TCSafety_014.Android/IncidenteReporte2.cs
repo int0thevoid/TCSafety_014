@@ -24,6 +24,8 @@ namespace PCLNative_TCSafety_014.Droid
         private int _id_impactado;
         private int _id_impacto;
         private int _id_potencial;
+        //private string _fecha_ocurrencia;
+        //private string _hora_ocurrencia;
 
         private EditText txtTitulo;
         private Spinner cbEmpresa2;
@@ -33,6 +35,12 @@ namespace PCLNative_TCSafety_014.Droid
         private Spinner cbImpacto;
         private Spinner cbPotencial;
         private Button btnIncidenteReporte3;
+        private Button btnGetFecha;
+        private Button btnGetHora;
+        private TextView lblFecha, lblHora;
+
+        //private DatePicker datePicker;
+        //private TimePicker timePicker;
 
         private List<Clases.TCEmpresa> listadoEmpresas;
         private List<Clases.INImpacto> listadoImpacto;
@@ -58,6 +66,11 @@ namespace PCLNative_TCSafety_014.Droid
             txtTitulo = FindViewById<EditText>(Resource.Id.txtTitulo);
             btnIncidenteReporte3 = FindViewById<Button>(Resource.Id.btnIncidenteReporte3);
 
+            btnGetFecha = FindViewById<Button>(Resource.Id.btnGetFecha);
+            btnGetHora = FindViewById<Button>(Resource.Id.btnGetHora);
+            lblFecha = FindViewById<TextView>(Resource.Id.lblFecha);
+            lblHora = FindViewById<TextView>(Resource.Id.lblHora);
+            
             cbEmpresa2.Enabled = false;
             client.getListadoEmpresaCompleted += Client_getListadoEmpresaCompleted;
             client.getListadoEmpresaAsync();
@@ -77,6 +90,19 @@ namespace PCLNative_TCSafety_014.Droid
 
             btnIncidenteReporte3.Click += BtnIncidenteReporte3_Click;
 
+            btnGetFecha.Click += BtnGetFecha_Click;
+            btnGetHora.Click += BtnGetHora_Click;
+
+        }
+
+        private void BtnGetHora_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnGetFecha_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void BtnIncidenteReporte3_Click(object sender, EventArgs e)
@@ -84,6 +110,8 @@ namespace PCLNative_TCSafety_014.Droid
             _titulo = txtTitulo.Text;
             _relato_causa = txtRelatoCausa.Text;
             _medidas_control = txtMedidasControl.Text;
+            //_fecha_ocurrencia = datePicker.DateTime.ToString();
+            //_hora_ocurrencia = timePicker.Hour.ToString();
 
             var incidente3 = new Intent(this, typeof(IncidenteReporte3));
             incidente3.PutExtra("id_investigador", _id_investigador);
@@ -94,7 +122,9 @@ namespace PCLNative_TCSafety_014.Droid
             incidente3.PutExtra("id_impactado", _id_impactado);
             incidente3.PutExtra("id_impacto", _id_impacto);
             incidente3.PutExtra("id_potencial", _id_potencial);
-    
+            //incidente3.PutExtra("fecha_ocurrencia", _fecha_ocurrencia);
+            //incidente3.PutExtra("hora_ocurrencia", _hora_ocurrencia);
+
             StartActivity(incidente3);
         }
 

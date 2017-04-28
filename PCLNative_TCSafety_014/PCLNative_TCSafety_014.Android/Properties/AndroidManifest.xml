@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="011704283" android:installLocation="auto" android:versionName="0.1.17.04.283">
 	<uses-sdk android:minSdkVersion="15" />
+	<uses-permission android:name="android.permission.CAMERA" />
 	<application android:label="PCLNative_TCSafety_014.Android"></application>
 </manifest>

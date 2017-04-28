@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView4"
-        android:layout_marginTop="30dp"
         android:textColor="@android:color/black"/>
       <TextView
           android:text="Información base de los hechos"
@@ -123,18 +122,65 @@
           android:layout_height="wrap_content"
           android:id="@+id/textView10"
           android:textColor="@android:color/black"/>
-      <!--
-            <DatePicker
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/datePicker"
-                android:minWidth="25px"
-                android:minHeight="25px" />
-            <TimePicker
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/timePicker" />
-          -->
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_margin="5dp"
+        android:weightSum="10">
+        <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/white"
+          android:layout_margin="5dp"
+          android:layout_weight="5"
+          android:weightSum="10">
+          <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGetFecha"
+            android:text="Fecha"
+            android:textColor="@android:color/white"
+            android:background="#808080" 
+            android:layout_weight="3"/>
+          <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblFecha"
+            android:textColor="@android:color/black"
+            android:layout_weight="7"/>
+        </LinearLayout>
+        <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/white"
+          android:layout_margin="5dp"
+          android:layout_weight="5"
+          android:weightSum="10">
+          <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGetHora"
+            android:text="Hora"
+            android:textColor="@android:color/white"
+            android:background="#808080"
+            android:layout_weight="3"/>
+          <TextView
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblHora"
+            android:textColor="@android:color/black"
+            android:layout_weight="7"/>
+        
+        </LinearLayout>
+      </LinearLayout>
       <Button
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

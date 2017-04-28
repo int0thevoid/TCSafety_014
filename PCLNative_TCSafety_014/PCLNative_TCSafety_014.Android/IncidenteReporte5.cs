@@ -58,7 +58,12 @@ namespace PCLNative_TCSafety_014.Droid
             _id_estado_tipo_incidente = Intent.GetIntExtra("id_estado_tipo_incidente", 0);
             _id_tipo_incidente = Intent.GetIntExtra("id_tipo_incidente", 0);
             _lugar = Intent.GetStringExtra("lugar");
-            listadoAfectado = JsonConvert.DeserializeObject<List<Clases.INAfectado>>(Intent.GetStringExtra("listadoAfectado"));
+
+            if (_id_estado_tipo_incidente == 2)
+            {
+                //con lesiones
+                listadoAfectado = JsonConvert.DeserializeObject<List<Clases.INAfectado>>(Intent.GetStringExtra("listadoAfectado"));
+            }
 
             btnTomarFoto = FindViewById<Button>(Resource.Id.btnTomarFoto);
             btnReportarIncidente = FindViewById<Button>(Resource.Id.btnReportarIncidente);
@@ -70,6 +75,10 @@ namespace PCLNative_TCSafety_014.Droid
 
         private void BtnReportarIncidente_Click(object sender, EventArgs e)
         {
+            client = new WSTCSafety.WSIncidentes();
+            //client.guardarIncidente(_titulo, _id_empresa, true, "", true, "", true, _relato_causa, _medidas_control,
+            //    _id_impacto, true, _id_potencial, true, _lugar, _id_area, true, 1, true, _id_estado_tipo_incidente, true, _id_subarea, true,
+            //    6, true, 1, true);
             
         }
 
