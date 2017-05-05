@@ -95,7 +95,7 @@
                 android:id="@+id/cbTipoIncidente"
                 android:layout_marginBottom="100dp"
                 android:background="#808080" />
-          <TextView
+            <TextView
                 android:text=""
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"

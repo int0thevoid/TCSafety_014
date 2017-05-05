@@ -53,11 +53,24 @@ namespace PCLNative_TCSafety_014.Droid
 
         private void Client_getListadoUsuarioCompleted(object sender, WSTCSafety.getListadoUsuarioCompletedEventArgs e)
         {
-            if (true)
+            if (txtRut.Text == "11.111.111-1")
             {
-                var Home = new Intent(this, typeof(Home));
-                StartActivity(Home);
+                if(txtPassword.Text == "1")
+                {
+                    var Home = new Intent(this, typeof(Home));
+                    StartActivity(Home);
+                }
+                else
+                {
+                    lblMensaje.Text = "Usuario y/o contraseña inválidos.";
+                }
+
             }
+            else
+            {
+                lblMensaje.Text = "Usuario y/o contraseña inválidos.";
+            }
+            btnIngresar.Enabled = true;
         }
     }
 }

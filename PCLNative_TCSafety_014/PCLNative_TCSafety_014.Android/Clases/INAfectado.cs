@@ -20,7 +20,7 @@ namespace PCLNative_TCSafety_014.Droid.Clases
         public string Apellidos { get; set; }
         public string Sexo { get; set; }
         public int Edad { get; set; }
-        public string idEmpresa { get; set; }
+        public int IdEmpresa { get; set; }
         public string Area { get; set; }
         public string Jefedirecto { get; set; }
         public string Antiguedad { get; set; }

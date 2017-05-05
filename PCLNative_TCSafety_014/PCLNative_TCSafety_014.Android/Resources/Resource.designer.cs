@@ -90,17 +90,17 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f050002
 			public const int btnIncidentes = 2131034114;
 			
-			// aapt resource value: 0x7f05003a
-			public const int btnIngresar = 2131034170;
+			// aapt resource value: 0x7f05003b
+			public const int btnIngresar = 2131034171;
 			
 			// aapt resource value: 0x7f050004
 			public const int btnInventario = 2131034116;
 			
-			// aapt resource value: 0x7f050035
-			public const int btnReportarIncidente = 2131034165;
+			// aapt resource value: 0x7f050036
+			public const int btnReportarIncidente = 2131034166;
 			
-			// aapt resource value: 0x7f050034
-			public const int btnTomarFoto = 2131034164;
+			// aapt resource value: 0x7f050035
+			public const int btnTomarFoto = 2131034165;
 			
 			// aapt resource value: 0x7f050005
 			public const int button3 = 2131034117;
@@ -141,8 +141,8 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f050030
 			public const int cbTipoLesion = 2131034160;
 			
-			// aapt resource value: 0x7f050033
-			public const int imageView = 2131034163;
+			// aapt resource value: 0x7f050034
+			public const int imageView = 2131034164;
 			
 			// aapt resource value: 0x7f05001a
 			public const int lblFecha = 2131034138;
@@ -150,8 +150,11 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f05001c
 			public const int lblHora = 2131034140;
 			
-			// aapt resource value: 0x7f050037
-			public const int lblMensaje = 2131034167;
+			// aapt resource value: 0x7f050038
+			public const int lblMensaje = 2131034168;
+			
+			// aapt resource value: 0x7f050033
+			public const int lblMensaje5 = 2131034163;
 			
 			// aapt resource value: 0x7f05002c
 			public const int lblMsgLesionados = 2131034156;
@@ -165,8 +168,8 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f050003
 			public const int linearLayout2 = 2131034115;
 			
-			// aapt resource value: 0x7f050036
-			public const int textView1 = 2131034166;
+			// aapt resource value: 0x7f050037
+			public const int textView1 = 2131034167;
 			
 			// aapt resource value: 0x7f050018
 			public const int textView10 = 2131034136;
@@ -228,14 +231,14 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f05002d
 			public const int txtNombre = 2131034157;
 			
-			// aapt resource value: 0x7f050039
-			public const int txtPassword = 2131034169;
+			// aapt resource value: 0x7f05003a
+			public const int txtPassword = 2131034170;
 			
 			// aapt resource value: 0x7f050011
 			public const int txtRelatoCausa = 2131034129;
 			
-			// aapt resource value: 0x7f050038
-			public const int txtRut = 2131034168;
+			// aapt resource value: 0x7f050039
+			public const int txtRut = 2131034169;
 			
 			// aapt resource value: 0x7f05000e
 			public const int txtTitulo = 2131034126;

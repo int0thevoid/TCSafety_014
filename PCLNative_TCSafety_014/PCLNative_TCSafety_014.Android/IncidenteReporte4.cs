@@ -34,6 +34,8 @@ namespace PCLNative_TCSafety_014.Droid
         private int _id_estado_tipo_incidente;
         private int _id_tipo_incidente;
         private string _lugar;
+        private int _day, _month, _year;
+        private int _hour, _minute;
 
         private EditText txtNombre;
         private EditText txtApellido;
@@ -78,6 +80,11 @@ namespace PCLNative_TCSafety_014.Droid
             _id_estado_tipo_incidente = Intent.GetIntExtra("id_estado_tipo_incidente", 0);
             _id_tipo_incidente = Intent.GetIntExtra("id_tipo_incidente", 0);
             _lugar = Intent.GetStringExtra("lugar");
+            _day = Intent.GetIntExtra("dia", 0);
+            _month = Intent.GetIntExtra("mes", 0);
+            _year = Intent.GetIntExtra("ano", 0);
+            _hour = Intent.GetIntExtra("hora", 0);
+            _minute = Intent.GetIntExtra("minuto", 0);
 
             this._numeroLesionado = _numeroLesionado + n_lesionado;
 
@@ -129,6 +136,11 @@ namespace PCLNative_TCSafety_014.Droid
             incidenteReporte5.PutExtra("id_tipo_incidente", _id_tipo_incidente);
             incidenteReporte5.PutExtra("lugar", _lugar);
             incidenteReporte5.PutExtra("listadoAfectado", JsonConvert.SerializeObject(listadoAfectado));
+            incidenteReporte5.PutExtra("dia", _day);
+            incidenteReporte5.PutExtra("mes", _month);
+            incidenteReporte5.PutExtra("ano", _year);
+            incidenteReporte5.PutExtra("hora", _hour);
+            incidenteReporte5.PutExtra("minuto", _minute);
 
             StartActivity(incidenteReporte5);
         }

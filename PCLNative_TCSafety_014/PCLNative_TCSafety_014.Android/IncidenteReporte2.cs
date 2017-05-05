@@ -10,12 +10,17 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using static Android.App.DatePickerDialog;
+using static Android.App.TimePickerDialog;
 
 namespace PCLNative_TCSafety_014.Droid
 {
     [Activity(Label = "Reporte de incidente: 2")]
-    public class IncidenteReporte2 : Activity
+    public class IncidenteReporte2 : Activity, IOnDateSetListener, IOnTimeSetListener
     {
+        private const int DATE_DIALOG = 1;
+        private const int TIME_DIALOG = 2;
+
         private int _id_investigador;
         private string _titulo;
         private int _id_empresa;
@@ -24,8 +29,9 @@ namespace PCLNative_TCSafety_014.Droid
         private int _id_impactado;
         private int _id_impacto;
         private int _id_potencial;
-        //private string _fecha_ocurrencia;
-        //private string _hora_ocurrencia;
+        private int _day = DateTime.Now.Day, _month = DateTime.Now.Month, _year = DateTime.Now.Year;
+        private int _hour = DateTime.Now.Hour, _minute = DateTime.Now.Minute;
+        
 
         private EditText txtTitulo;
         private Spinner cbEmpresa2;
@@ -92,17 +98,34 @@ namespace PCLNative_TCSafety_014.Droid
 
             btnGetFecha.Click += BtnGetFecha_Click;
             btnGetHora.Click += BtnGetHora_Click;
-
         }
 
         private void BtnGetHora_Click(object sender, EventArgs e)
         {
-            
+            ShowDialog(TIME_DIALOG);
         }
 
         private void BtnGetFecha_Click(object sender, EventArgs e)
         {
-            
+            ShowDialog(DATE_DIALOG);
+        }
+
+        protected override Dialog OnCreateDialog(int id)
+        {
+            switch(id)
+            {
+                case DATE_DIALOG:
+                    {
+                        return new DatePickerDialog(this, this, this._year, this._month, this._day);
+                    }
+                    break;
+                case TIME_DIALOG:
+                    {
+                        return new TimePickerDialog(this, this, this._hour, this._minute, true);
+                    }
+                    break;
+            }
+            return null;
         }
 
         private void BtnIncidenteReporte3_Click(object sender, EventArgs e)
@@ -110,8 +133,6 @@ namespace PCLNative_TCSafety_014.Droid
             _titulo = txtTitulo.Text;
             _relato_causa = txtRelatoCausa.Text;
             _medidas_control = txtMedidasControl.Text;
-            //_fecha_ocurrencia = datePicker.DateTime.ToString();
-            //_hora_ocurrencia = timePicker.Hour.ToString();
 
             var incidente3 = new Intent(this, typeof(IncidenteReporte3));
             incidente3.PutExtra("id_investigador", _id_investigador);
@@ -122,8 +143,11 @@ namespace PCLNative_TCSafety_014.Droid
             incidente3.PutExtra("id_impactado", _id_impactado);
             incidente3.PutExtra("id_impacto", _id_impacto);
             incidente3.PutExtra("id_potencial", _id_potencial);
-            //incidente3.PutExtra("fecha_ocurrencia", _fecha_ocurrencia);
-            //incidente3.PutExtra("hora_ocurrencia", _hora_ocurrencia);
+            incidente3.PutExtra("dia", _day);
+            incidente3.PutExtra("mes", _month);
+            incidente3.PutExtra("ano", _year);
+            incidente3.PutExtra("hora", _hour);
+            incidente3.PutExtra("minuto", _minute);
 
             StartActivity(incidente3);
         }
@@ -211,6 +235,27 @@ namespace PCLNative_TCSafety_014.Droid
             ArrayAdapter adapterCBEmpresa2 = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, mItems);
             cbEmpresa2.Adapter = adapterCBEmpresa2;
             cbEmpresa2.Enabled = true;
+        }
+
+        public void OnDateSet(DatePicker view, int year, int month, int dayOfMonth)
+        {
+            this._year = year;
+            this._month = month;
+            this._day = dayOfMonth;
+            string day_string = (_day > 9) ? _day.ToString() : "0" + _day.ToString();
+            string month_string = (_month > 9) ? _month.ToString() : "0" + _month.ToString();
+            
+            lblFecha.Text = day_string + " / " + month_string + " / " + this._year;
+
+        }
+
+        public void OnTimeSet(TimePicker view, int hourOfDay, int minute)
+        {
+            this._hour = hourOfDay;
+            this._minute = minute;
+            string hour_string = (_hour > 9) ? hourOfDay.ToString() : "0" + hourOfDay.ToString() ;
+            string minute_string = (_minute > 9) ? minute.ToString() : "0" + minute.ToString();
+            lblHora.Text = hour_string + ":" + minute_string;
         }
     }
 }

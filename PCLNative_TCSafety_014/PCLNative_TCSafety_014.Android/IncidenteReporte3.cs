@@ -16,6 +16,8 @@ namespace PCLNative_TCSafety_014.Droid
     [Activity(Label = "Reporte de incidente: 3")]
     public class IncidenteReporte3 : Activity
     {
+        
+
         private int _id_investigador;
         private string _titulo;
         private int _id_empresa;
@@ -30,6 +32,9 @@ namespace PCLNative_TCSafety_014.Droid
         private int _id_estado_tipo_incidente;
         private int _id_tipo_incidente;
         private string _lugar;
+
+        private int _day, _month, _year;
+        private int _hour, _minute;
 
         private EditText txtLugar;
         private Spinner cbArea;
@@ -60,6 +65,11 @@ namespace PCLNative_TCSafety_014.Droid
             _id_impactado = Intent.GetIntExtra("id_impactado", 0);
             _id_impacto = Intent.GetIntExtra("id_impacto", 0);
             _id_potencial = Intent.GetIntExtra("id_potencial", 0);
+            _day = Intent.GetIntExtra("dia", 0);
+            _month = Intent.GetIntExtra("mes", 0);
+            _year = Intent.GetIntExtra("ano", 0);
+            _hour = Intent.GetIntExtra("hora", 0);
+            _minute = Intent.GetIntExtra("minuto", 0);
 
             cbArea = FindViewById<Spinner>(Resource.Id.cbArea);
             cbSubarea = FindViewById<Spinner>(Resource.Id.cbSubarea);
@@ -87,6 +97,8 @@ namespace PCLNative_TCSafety_014.Droid
             cbSubarea.ItemSelected += CbSubarea_ItemSelected;
 
             btnIncidenteReporte4.Click += BtnIncidenteReporte4_Click;
+
+            
         }
 
         private void BtnIncidenteReporte4_Click(object sender, EventArgs e)
@@ -119,7 +131,12 @@ namespace PCLNative_TCSafety_014.Droid
             intent.PutExtra("id_estado_tipo_incidente",_id_estado_tipo_incidente);
             intent.PutExtra("id_tipo_incidente", _id_tipo_incidente);
             intent.PutExtra("lugar", _lugar);
-    
+            intent.PutExtra("dia", _day);
+            intent.PutExtra("mes", _month);
+            intent.PutExtra("ano", _year);
+            intent.PutExtra("hora", _hour);
+            intent.PutExtra("minuto", _minute);
+
             StartActivity(intent);
         }
 
