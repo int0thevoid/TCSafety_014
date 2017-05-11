@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="011704283" android:installLocation="auto" android:versionName="0.1.17.04.283">
-	<uses-sdk android:minSdkVersion="15" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="011705112" android:installLocation="auto" android:versionName="0.1.17.05.112">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
 	<uses-permission android:name="android.permission.CAMERA" />
-	<application android:label="PCLNative_TCSafety_014.Android"></application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="PCLNative_TCSafety_014.Android" android:icon="@drawable/Icon"></application>
 </manifest>

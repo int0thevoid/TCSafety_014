@@ -16,7 +16,7 @@ namespace PCLNative_TCSafety_014.Droid
     [Activity(Label = "Reporte de incidente: 1")]
     public class IncidenteReporte1 : Activity
     {
-        private int id_investigador;
+        private int _id_investigador = 0;
 
         private Spinner cbEmpresa1;
         private Spinner cbInvestigador1;
@@ -31,33 +31,42 @@ namespace PCLNative_TCSafety_014.Droid
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.IncidenteReporte1);
-
+            btnIncidenteReporte2 = FindViewById<Button>(Resource.Id.btnIncidenteReporte2);
+            
             cbEmpresa1 = FindViewById<Spinner>(Resource.Id.cbEmpresa1);
             cbInvestigador1 = FindViewById<Spinner>(Resource.Id.cbInvestigador1);
-            btnIncidenteReporte2 = FindViewById<Button>(Resource.Id.btnIncidenteReporte2);
-
+            
             client = new WSTCSafety.WSIncidentes();
-
+            
             cbEmpresa1.Enabled = false;
             client.getListadoEmpresaCompleted += Client_getListadoEmpresaCompleted;
             client.getListadoEmpresaAsync();
 
             cbEmpresa1.ItemSelected += CbEmpresa1_ItemSelected;
             cbInvestigador1.ItemSelected += CbInvestigador1_ItemSelected;
+            
             btnIncidenteReporte2.Click += BtnIncidenteReporte2_Click;
-
+            
         }
 
         private void CbInvestigador1_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
-            id_investigador = this.listadoInvestigador.ElementAt(e.Position).Id;
+            _id_investigador = this.listadoInvestigador.ElementAt(e.Position).Id;
         }
 
         private void BtnIncidenteReporte2_Click(object sender, EventArgs e)
         {
-            var incidente2 = new Intent(this, typeof(IncidenteReporte2));
-            incidente2.PutExtra("id_investigador",id_investigador);
-            StartActivity(incidente2);
+            if(_id_investigador != 0)
+            {
+                var incidente2 = new Intent(this, typeof(IncidenteReporte2));
+                incidente2.PutExtra("id_investigador", _id_investigador);
+                StartActivity(incidente2);
+            }
+            else
+            {
+                string toast = string.Format("Hay campos requeridos que no han sido especificados.");
+                Toast.MakeText(this, toast, ToastLength.Long).Show();
+            }
         }
 
         private void CbEmpresa1_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)

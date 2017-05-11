@@ -296,8 +296,11 @@ namespace PCLNative_TCSafety_014.Droid
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
 			
+			// aapt resource value: 0x7f040003
+			public const int primaryColor = 2130968579;
+			
 			// aapt resource value: 0x7f040002
-			public const int primaryColor = 2130968578;
+			public const int rut_filter = 2130968578;
 			
 			static String()
 			{
