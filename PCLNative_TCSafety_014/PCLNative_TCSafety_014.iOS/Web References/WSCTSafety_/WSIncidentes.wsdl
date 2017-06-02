@@ -85,12 +85,6 @@
   <wsdl:message name="IWSIncidentes_guardarIncidenteTipoIncidente_OutputMessage">
     <wsdl:part name="parameters" element="tns:guardarIncidenteTipoIncidenteResponse" />
   </wsdl:message>
-  <wsdl:message name="IWSIncidentes_guardarIncidenteEstadoIncidente_InputMessage">
-    <wsdl:part name="parameters" element="tns:guardarIncidenteEstadoIncidente" />
-  </wsdl:message>
-  <wsdl:message name="IWSIncidentes_guardarIncidenteEstadoIncidente_OutputMessage">
-    <wsdl:part name="parameters" element="tns:guardarIncidenteEstadoIncidenteResponse" />
-  </wsdl:message>
   <wsdl:message name="IWSIncidentes_guardarInvolucrado_InputMessage">
     <wsdl:part name="parameters" element="tns:guardarInvolucrado" />
   </wsdl:message>
@@ -167,10 +161,6 @@
     <wsdl:operation name="guardarIncidenteTipoIncidente">
       <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteTipoIncidente" message="tns:IWSIncidentes_guardarIncidenteTipoIncidente_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteTipoIncidenteResponse" message="tns:IWSIncidentes_guardarIncidenteTipoIncidente_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="guardarIncidenteEstadoIncidente">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteEstadoIncidente" message="tns:IWSIncidentes_guardarIncidenteEstadoIncidente_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteEstadoIncidenteResponse" message="tns:IWSIncidentes_guardarIncidenteEstadoIncidente_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="guardarInvolucrado">
       <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarInvolucrado" message="tns:IWSIncidentes_guardarInvolucrado_InputMessage" />
@@ -301,15 +291,6 @@
     </wsdl:operation>
     <wsdl:operation name="guardarIncidenteTipoIncidente">
       <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarIncidenteTipoIncidente" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="guardarIncidenteEstadoIncidente">
-      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarIncidenteEstadoIncidente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

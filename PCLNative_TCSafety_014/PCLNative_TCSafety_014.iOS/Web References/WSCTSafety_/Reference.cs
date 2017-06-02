@@ -55,8 +55,6 @@ namespace PCLNative_TCSafety_014.iOS.WSCTSafety {
         
         private System.Threading.SendOrPostCallback guardarIncidenteTipoIncidenteOperationCompleted;
         
-        private System.Threading.SendOrPostCallback guardarIncidenteEstadoIncidenteOperationCompleted;
-        
         private System.Threading.SendOrPostCallback guardarInvolucradoOperationCompleted;
         
         private System.Threading.SendOrPostCallback guardarAnexoOperationCompleted;
@@ -141,9 +139,6 @@ namespace PCLNative_TCSafety_014.iOS.WSCTSafety {
         
         /// <remarks/>
         public event guardarIncidenteTipoIncidenteCompletedEventHandler guardarIncidenteTipoIncidenteCompleted;
-        
-        /// <remarks/>
-        public event guardarIncidenteEstadoIncidenteCompletedEventHandler guardarIncidenteEstadoIncidenteCompleted;
         
         /// <remarks/>
         public event guardarInvolucradoCompletedEventHandler guardarInvolucradoCompleted;
@@ -669,44 +664,6 @@ namespace PCLNative_TCSafety_014.iOS.WSCTSafety {
             if ((this.guardarIncidenteTipoIncidenteCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.guardarIncidenteTipoIncidenteCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWSIncidentes/guardarIncidenteEstadoIncidente", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void guardarIncidenteEstadoIncidente(int idincidente, [System.Xml.Serialization.XmlIgnoreAttribute()] bool idincidenteSpecified, int idestadoincidente, [System.Xml.Serialization.XmlIgnoreAttribute()] bool idestadoincidenteSpecified, System.DateTime fecha, [System.Xml.Serialization.XmlIgnoreAttribute()] bool fechaSpecified) {
-            this.Invoke("guardarIncidenteEstadoIncidente", new object[] {
-                        idincidente,
-                        idincidenteSpecified,
-                        idestadoincidente,
-                        idestadoincidenteSpecified,
-                        fecha,
-                        fechaSpecified});
-        }
-        
-        /// <remarks/>
-        public void guardarIncidenteEstadoIncidenteAsync(int idincidente, bool idincidenteSpecified, int idestadoincidente, bool idestadoincidenteSpecified, System.DateTime fecha, bool fechaSpecified) {
-            this.guardarIncidenteEstadoIncidenteAsync(idincidente, idincidenteSpecified, idestadoincidente, idestadoincidenteSpecified, fecha, fechaSpecified, null);
-        }
-        
-        /// <remarks/>
-        public void guardarIncidenteEstadoIncidenteAsync(int idincidente, bool idincidenteSpecified, int idestadoincidente, bool idestadoincidenteSpecified, System.DateTime fecha, bool fechaSpecified, object userState) {
-            if ((this.guardarIncidenteEstadoIncidenteOperationCompleted == null)) {
-                this.guardarIncidenteEstadoIncidenteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnguardarIncidenteEstadoIncidenteOperationCompleted);
-            }
-            this.InvokeAsync("guardarIncidenteEstadoIncidente", new object[] {
-                        idincidente,
-                        idincidenteSpecified,
-                        idestadoincidente,
-                        idestadoincidenteSpecified,
-                        fecha,
-                        fechaSpecified}, this.guardarIncidenteEstadoIncidenteOperationCompleted, userState);
-        }
-        
-        private void OnguardarIncidenteEstadoIncidenteOperationCompleted(object arg) {
-            if ((this.guardarIncidenteEstadoIncidenteCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.guardarIncidenteEstadoIncidenteCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1352,10 +1309,6 @@ namespace PCLNative_TCSafety_014.iOS.WSCTSafety {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
     public delegate void guardarIncidenteTipoIncidenteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]
-    public delegate void guardarIncidenteEstadoIncidenteCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")]

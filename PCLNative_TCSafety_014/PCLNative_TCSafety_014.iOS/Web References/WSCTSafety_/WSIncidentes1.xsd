@@ -180,20 +180,6 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="guardarIncidenteEstadoIncidente">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="idincidente" type="xs:int" />
-        <xs:element minOccurs="0" name="idestadoincidente" type="xs:int" />
-        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="guardarIncidenteEstadoIncidenteResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
   <xs:element name="guardarInvolucrado">
     <xs:complexType>
       <xs:sequence>
