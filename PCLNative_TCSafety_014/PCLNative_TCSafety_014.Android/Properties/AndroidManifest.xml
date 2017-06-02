@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="011705191" android:installLocation="auto" android:versionName="0.1.17.05.191">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="011706021" android:installLocation="auto" android:versionName="0.1.17.06.021">
 	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.INTERNET" />

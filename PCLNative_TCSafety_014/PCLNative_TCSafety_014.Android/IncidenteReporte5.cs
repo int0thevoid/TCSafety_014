@@ -37,7 +37,7 @@ namespace PCLNative_TCSafety_014.Droid
         private DateTime _fecha_ocurrencia;
         private DateTime _fecha_ingreso = DateTime.Now;
 
-        private Bitmap _bitmap;
+        private Bitmap _bitmap = null;
 
         private int _id_incidente = 0;
 
@@ -95,6 +95,7 @@ namespace PCLNative_TCSafety_014.Droid
             client = new WSTCSafety.WSIncidentes();
             btnReportarIncidente.Enabled = false;
             btnTomarFoto.Enabled = false;
+            
             lblMensaje5.Text = "Registrando el incidente... por favor, espere.";
             client.guardarIncidenteCompleted += Client_guardarIncidenteCompleted;
             client.guardarIncidenteAsync(_titulo, _id_empresa, true, _fecha_ingreso, true, _fecha_ocurrencia, true, _relato_causa, _medidas_control,
@@ -106,39 +107,55 @@ namespace PCLNative_TCSafety_014.Droid
         private void Client_guardarIncidenteCompleted(object sender, WSTCSafety.guardarIncidenteCompletedEventArgs e)
         {
             _id_incidente = e.guardarIncidenteResult;
-            if(_id_incidente != 0)
+            if(_bitmap != null)
             {
-                client.guardarInvolucradoCompleted += Client_guardarInvolucradoCompleted;
-                client.guardarInvolucradoAsync(_id_incidente, true, 9, true, 1, true, _fecha_ocurrencia,true);
-                client.guardarInvolucradoAsync(_id_incidente, true, _id_investigador, true, 2, true, _fecha_ocurrencia, true);
-                if(_id_estado_tipo_incidente == 2)
+                if (_id_incidente != 0)
                 {
-                    client.guardarAfectadoCompleted += Client_guardarAfectadoCompleted;
-                    //Con Lesiones
-                    foreach (Clases.INAfectado item in listadoAfectado)
+                    try
                     {
-                        client.guardarAfectadoAsync("", item.Nombre, item.Apellidos, item.Sexo, item.Edad, true, item.IdEmpresa, true, item.Area, item.Jefedirecto, "", item.Antiguedad, item.IdTipoLesion, true, item.DiasPerdidos, true, item.ConsecuenciaObservacion, _id_incidente, true);
+                        client.guardarInvolucradoCompleted += Client_guardarInvolucradoCompleted;
+                        client.guardarInvolucradoAsync(_id_incidente, true, 9, true, 1, true, _fecha_ocurrencia, true);
+                        client.guardarInvolucradoAsync(_id_incidente, true, _id_investigador, true, 2, true, _fecha_ocurrencia, true);
+                        if (_id_estado_tipo_incidente == 2)
+                        {
+                            client.guardarAfectadoCompleted += Client_guardarAfectadoCompleted;
+                            //Con Lesiones
+                            foreach (Clases.INAfectado item in listadoAfectado)
+                            {
+                                client.guardarAfectadoAsync("", item.Nombre, item.Apellidos, item.Sexo, item.Edad, true, item.IdEmpresa, true, item.Area, item.Jefedirecto, "", item.Antiguedad, item.IdTipoLesion, true, item.DiasPerdidos, true, item.ConsecuenciaObservacion, _id_incidente, true);
+                            }
+                        }
+                        else
+                        {
+                            //Sin Lesiones
+                            client.guardarIncidenteTipoIncidente(_id_incidente, true, _id_tipo_incidente, true);
+                        }
+
+                        MemoryStream stream = new MemoryStream();
+                        _bitmap.Compress(Bitmap.CompressFormat.Jpeg, 0, stream);
+                        byte[] bitmapData = stream.ToArray();
+
+                        string nombre_imagen = "image_incident_" + _id_incidente.ToString();
+                        client.guardarAnexoCompleted += Client_guardarAnexoCompleted;
+                        client.guardarAnexoAsync(bitmapData, "jpeg", nombre_imagen, _fecha_ingreso, true);
+                    }
+                    catch (Exception)
+                    {
+
+                        lblMensaje5.Text = "Error al agregar incidente.";
                     }
                 }
                 else
                 {
-                    //Sin Lesiones
-                    client.guardarIncidenteTipoIncidente(_id_incidente,true, _id_tipo_incidente,true);
+                    lblMensaje5.Text = "Hubo un problema en registrar el incidente.";
                 }
-
-                MemoryStream stream = new MemoryStream();
-                _bitmap.Compress(Bitmap.CompressFormat.Jpeg, 0, stream);
-                byte[] bitmapData = stream.ToArray();
-
-                string nombre_imagen = "image_incident_" + _id_incidente.ToString();
-                client.guardarAnexoCompleted += Client_guardarAnexoCompleted;
-                client.guardarAnexoAsync(bitmapData, "jpeg", nombre_imagen, _fecha_ingreso, true);
-
             }
             else
             {
-                lblMensaje5.Text = "Hubo un problema en registrar el incidente.";
+                lblMensaje5.Text = "Debe adjuntar una imagen del incidente.";
             }
+            btnReportarIncidente.Enabled = true;
+            btnTomarFoto.Enabled = true;
         }
 
         private void Client_guardarAnexoCompleted(object sender, WSTCSafety.guardarAnexoCompletedEventArgs e)
