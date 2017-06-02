@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WSmobile" />
+  <xs:element name="getEmpresa">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WSmobile" minOccurs="0" name="getEmpresaResult" nillable="true" type="q1:TCEmpresa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoEmpresa">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoEmpresaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_empresa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoUsuarioResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoImpactado">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoImpactadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoImpactadoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoImpacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_impactado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoImpactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoImpactoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoPotencial">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoPotencialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoPotencialResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoArea">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoAreaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoSubarea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_area" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoSubareaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoSubareaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoEstadoTipoIncidente">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoEstadoTipoIncidenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoEstadoTipoIncidenteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoTipoIncidente">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoTipoIncidenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoTipoIncidenteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoTipoLesion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListadoTipoLesionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getListadoTipoLesionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarIncidente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="titulo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idempresa" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaingreso" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaocurrencia" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="relato" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="medidacontrol" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idimpacto" type="xs:int" />
+        <xs:element minOccurs="0" name="idpotencial" type="xs:int" />
+        <xs:element minOccurs="0" name="lugar" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idarea" type="xs:int" />
+        <xs:element minOccurs="0" name="idtipoanalisis" type="xs:int" />
+        <xs:element minOccurs="0" name="idestadotipoincidente" type="xs:int" />
+        <xs:element minOccurs="0" name="idsubarea" type="xs:int" />
+        <xs:element minOccurs="0" name="idoperacion" type="xs:int" />
+        <xs:element minOccurs="0" name="idoperacionunitaria" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarIncidenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="guardarIncidenteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarIncidenteTipoIncidente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idincidente" type="xs:int" />
+        <xs:element minOccurs="0" name="idtipoincidente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarIncidenteTipoIncidenteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarInvolucrado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idincidente" type="xs:int" />
+        <xs:element minOccurs="0" name="idusuario" type="xs:int" />
+        <xs:element minOccurs="0" name="idtipoinvolucrado" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaasignacion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarInvolucradoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarAnexo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imagetobytearray" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechacreacion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarAnexoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="guardarAnexoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarAnexoIncidente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idanexo" type="xs:int" />
+        <xs:element minOccurs="0" name="idincidente" type="xs:int" />
+        <xs:element minOccurs="0" name="idtipoanexoincidente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarAnexoIncidenteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarAfectado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rut" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sexo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="edad" type="xs:int" />
+        <xs:element minOccurs="0" name="idempresa" type="xs:int" />
+        <xs:element minOccurs="0" name="area" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jefedirecto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="experiencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="antiguedad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idtipolesion" type="xs:int" />
+        <xs:element minOccurs="0" name="diasperdidos" type="xs:int" />
+        <xs:element minOccurs="0" name="consecuenciaobservacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idincidente" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guardarAfectadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

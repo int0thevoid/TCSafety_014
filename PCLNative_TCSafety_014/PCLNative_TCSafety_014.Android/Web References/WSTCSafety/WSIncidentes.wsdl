@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSIncidentes" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tcsafety.dyndns.org:45931/WSIncidentes.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WSmobile" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSIncidentes_getEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoImpactado_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoImpactado" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoImpactado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoImpactadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoImpacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoImpacto" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoImpacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoImpactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoPotencial_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoPotencial" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoPotencial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoPotencialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoArea_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoArea" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoArea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoAreaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoSubarea_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoSubarea" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoSubarea_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoSubareaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoEstadoTipoIncidente_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoEstadoTipoIncidente" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoEstadoTipoIncidente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoEstadoTipoIncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoTipoIncidente_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoTipoIncidente" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoTipoIncidente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoTipoIncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoTipoLesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoTipoLesion" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_getListadoTipoLesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getListadoTipoLesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarIncidente_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarIncidente" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarIncidente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarIncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarIncidenteTipoIncidente_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarIncidenteTipoIncidente" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarIncidenteTipoIncidente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarIncidenteTipoIncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarInvolucrado_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarInvolucrado" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarInvolucrado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarInvolucradoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarAnexo_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarAnexo" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarAnexo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarAnexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarAnexoIncidente_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarAnexoIncidente" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarAnexoIncidente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarAnexoIncidenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarAfectado_InputMessage">
+    <wsdl:part name="parameters" element="tns:guardarAfectado" />
+  </wsdl:message>
+  <wsdl:message name="IWSIncidentes_guardarAfectado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:guardarAfectadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWSIncidentes">
+    <wsdl:operation name="getEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getEmpresa" message="tns:IWSIncidentes_getEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getEmpresaResponse" message="tns:IWSIncidentes_getEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoEmpresa" message="tns:IWSIncidentes_getListadoEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoEmpresaResponse" message="tns:IWSIncidentes_getListadoEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoUsuario" message="tns:IWSIncidentes_getListadoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoUsuarioResponse" message="tns:IWSIncidentes_getListadoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoImpactado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoImpactado" message="tns:IWSIncidentes_getListadoImpactado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoImpactadoResponse" message="tns:IWSIncidentes_getListadoImpactado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoImpacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoImpacto" message="tns:IWSIncidentes_getListadoImpacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoImpactoResponse" message="tns:IWSIncidentes_getListadoImpacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoPotencial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoPotencial" message="tns:IWSIncidentes_getListadoPotencial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoPotencialResponse" message="tns:IWSIncidentes_getListadoPotencial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoArea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoArea" message="tns:IWSIncidentes_getListadoArea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoAreaResponse" message="tns:IWSIncidentes_getListadoArea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoSubarea">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoSubarea" message="tns:IWSIncidentes_getListadoSubarea_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoSubareaResponse" message="tns:IWSIncidentes_getListadoSubarea_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoEstadoTipoIncidente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoEstadoTipoIncidente" message="tns:IWSIncidentes_getListadoEstadoTipoIncidente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoEstadoTipoIncidenteResponse" message="tns:IWSIncidentes_getListadoEstadoTipoIncidente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoTipoIncidente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoTipoIncidente" message="tns:IWSIncidentes_getListadoTipoIncidente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoTipoIncidenteResponse" message="tns:IWSIncidentes_getListadoTipoIncidente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getListadoTipoLesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoTipoLesion" message="tns:IWSIncidentes_getListadoTipoLesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/getListadoTipoLesionResponse" message="tns:IWSIncidentes_getListadoTipoLesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarIncidente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidente" message="tns:IWSIncidentes_guardarIncidente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteResponse" message="tns:IWSIncidentes_guardarIncidente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarIncidenteTipoIncidente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteTipoIncidente" message="tns:IWSIncidentes_guardarIncidenteTipoIncidente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarIncidenteTipoIncidenteResponse" message="tns:IWSIncidentes_guardarIncidenteTipoIncidente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarInvolucrado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarInvolucrado" message="tns:IWSIncidentes_guardarInvolucrado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarInvolucradoResponse" message="tns:IWSIncidentes_guardarInvolucrado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarAnexo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarAnexo" message="tns:IWSIncidentes_guardarAnexo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarAnexoResponse" message="tns:IWSIncidentes_guardarAnexo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarAnexoIncidente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarAnexoIncidente" message="tns:IWSIncidentes_guardarAnexoIncidente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarAnexoIncidenteResponse" message="tns:IWSIncidentes_guardarAnexoIncidente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarAfectado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSIncidentes/guardarAfectado" message="tns:IWSIncidentes_guardarAfectado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSIncidentes/guardarAfectadoResponse" message="tns:IWSIncidentes_guardarAfectado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWSIncidentes" type="tns:IWSIncidentes">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoEmpresa">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoImpactado">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoImpactado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoImpacto">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoImpacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoPotencial">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoPotencial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoArea">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoArea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoSubarea">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoSubarea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoEstadoTipoIncidente">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoEstadoTipoIncidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoTipoIncidente">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoTipoIncidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListadoTipoLesion">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/getListadoTipoLesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarIncidente">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarIncidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarIncidenteTipoIncidente">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarIncidenteTipoIncidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarInvolucrado">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarInvolucrado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarAnexo">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarAnexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarAnexoIncidente">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarAnexoIncidente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarAfectado">
+      <soap:operation soapAction="http://tempuri.org/IWSIncidentes/guardarAfectado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSIncidentes">
+    <wsdl:port name="BasicHttpBinding_IWSIncidentes" binding="tns:BasicHttpBinding_IWSIncidentes">
+      <soap:address location="http://tcsafety.dyndns.org:45931/WSIncidentes.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

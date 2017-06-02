@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+  <ScrollView
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@android:color/white"
+      android:layout_margin="20dp">
+      <TextView
+          android:text="4. Afectados"
+          android:textAppearance="?android:attr/textAppearanceLarge"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView11"
+          android:layout_marginTop="30dp"
+          android:textColor="@android:color/black" />
+      <TextView
+          android:text="Personal afectado directamente en el incidente"
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView12"
+          android:layout_marginBottom="20dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text=""
+          android:textAppearance="?android:attr/textAppearanceSmall"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/lblMsgLesionados"
+          android:layout_marginBottom="0dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Nombre :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView13"
+          android:textColor="@android:color/black"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtNombre"
+          android:layout_marginBottom="10dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Apellido :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView13"
+          android:textColor="@android:color/black"/>
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/txtApellido"
+          android:layout_marginBottom="10dp"
+          android:textColor="@android:color/black"/>
+      <TextView
+          android:text="Empresa :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView7"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbEmpresa3"
+          android:layout_marginBottom="10dp"
+          android:background="#808080"/>
+      <TextView
+          android:text="Tipo lesión :"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView7"
+          android:textColor="@android:color/black"/>
+      <Spinner
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/cbTipoLesion"
+          android:layout_marginBottom="40dp"
+          android:background="#808080"/>
+      <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:background="@android:color/white">
+        <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnAgregarLesionado"
+          android:text="Agregar lesionado"
+          android:textColor="@android:color/white"
+          android:background="#D43F3A"
+          android:layout_weight="5"
+          android:paddingLeft="10dp"/>
+        <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/btnIncidenteReporte5"
+          android:text="Siguiente"
+          android:textColor="@android:color/white"
+          android:background="#316DA4"
+          android:layout_weight="5"
+          android:paddingRight="10dp"/>
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+</LinearLayout>

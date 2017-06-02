@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/white">
+        <TextView
+            android:text="___       ___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:text="Control de acceso"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblMensaje"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/black" />
+        <TextView
+            android:text="RUT"
+            android:layout_width="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="RUT"
+            android:id="@+id/txtRut"
+            android:layout_marginBottom="20dp"
+            android:textColor="@android:color/black"
+            android:maxLength="12"
+            android:digits="1234567890kK" />
+        <TextView
+            android:text="Contraseña"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textColor="@android:color/black" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPassword"
+            android:hint="Contraseña"
+            android:layout_marginBottom="30dp"
+            android:textColor="@android:color/black" />
+        <Button
+            android:text="Ingresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnIngresar"
+            android:background="#316DA4"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:text="©2016-2017 Todos los derechos reservados. Control Tower Safety - Aplicación HSEyC desarrollada por TCSafety"
+            android:textColor="@android:color/black"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+</LinearLayout>

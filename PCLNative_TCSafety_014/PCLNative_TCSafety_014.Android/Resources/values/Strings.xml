@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Click Me!</string>
+	<string name="app_name">TCSafety</string>
+  <string name="rut_filter">1234567890kK</string>
+  <string name="primaryColor">#316DA4</string>
+</resources>
