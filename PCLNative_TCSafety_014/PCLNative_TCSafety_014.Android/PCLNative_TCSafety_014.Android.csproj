@@ -81,6 +81,7 @@
     <Compile Include="Clases\TCEmpresa.cs" />
     <Compile Include="Clases\TCSubarea.cs" />
     <Compile Include="Clases\TCUsuario.cs" />
+    <Compile Include="EnviarCorreo1.cs" />
     <Compile Include="Home.cs" />
     <Compile Include="IncidenteReporte1.cs" />
     <Compile Include="IncidenteReporte2.cs" />
