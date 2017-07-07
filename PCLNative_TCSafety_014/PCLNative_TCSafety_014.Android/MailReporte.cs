@@ -12,14 +12,16 @@ using Android.Widget;
 
 namespace PCLNative_TCSafety_014.Droid
 {
-    [Activity(Label = "Enviar correos")]
-    public class EnviarCorreo1 : Activity
+    [Activity(Label = "Enviar Mail")]
+    public class MailReporte : Activity
     {
+        private int _id_reporte_incidente = 0;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            // Create your application here
+            
         }
     }
 }

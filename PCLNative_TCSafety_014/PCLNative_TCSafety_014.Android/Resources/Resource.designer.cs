@@ -275,7 +275,10 @@ namespace PCLNative_TCSafety_014.Droid
 			public const int IncidenteReporte5 = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int Main = 2130903046;
+			public const int MailReporte = 2130903046;
+			
+			// aapt resource value: 0x7f030007
+			public const int Main = 2130903047;
 			
 			static Layout()
 			{
